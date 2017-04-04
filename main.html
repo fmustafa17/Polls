@@ -1,0 +1,115 @@
+<head>
+    <title>Create a Poll</title>
+    <h1><center> </center></h1>
+</head>
+<body>
+
+
+</body>
+
+<template name="main">
+
+    <!--{{> create}}-->
+    <!--{{> display}}-->
+
+    {{> pulley}}
+
+</template>
+
+<template name="create"> 
+    <!--<a href="createPulley.html" type ="button" class="btn btn-default">Pulley</a>-->
+    <a href="{{pathFor route='pulley'}}">Pulley</a>
+   <a href="{{pathFor route='pollForm'}}">Multiple Choice</a>
+   
+    <!--<a href="pollform" type="button" class="btn btn-default">Multiple Choice</a>
+    <a href="poll-short.html" type="button" class="btn btn-default">Short Answer</a>-->
+</template>
+
+
+<template name="display">
+<!--**********This makes the multiple choice poll appear********-->
+ 
+ <!-- PULL IN THE POLL CREATION FORM -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        {{ >pollForm }}
+      </div>
+    </div>
+  </div>  
+
+  <!-- LOOP OVER POLLS AND SHOW EACH -->
+  <div class="polls">
+      {{ #each polls }}
+          {{ >pollForm }}
+      {{ /each }}
+  </div>
+  <!--**********************************************************-->
+  </template>
+
+
+<template name="pollForm">
+
+<form> 
+    <div class="form-group">
+        <label>Question</label>
+        <input type="text" name="question" class="form-control" placeholder="Your Question">
+    </div>
+
+    <div class="form-group">
+        <label>Choice #1</label>
+        <input type="text" name="choice1" class="form-control" placeholder="Enter choice here...">
+    </div>
+    <div class="form-group">
+        <label>Choice #2</label>
+        <input type="text" name="choice2" class="form-control" placeholder="Enter choice here...">
+    </div>
+    <div class="form-group">
+        <label>Choice #3</label>
+        <input type="text" name="choice3" class="form-control" placeholder="Enter choice here...">
+    </div>
+    <div class="form-group">
+        <label>Choice #4</label>
+        <input type="text" name="choice4" class="form-control" placeholder="Enter choice here...">
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Create Poll</button>
+</form>
+
+</template>
+
+
+<template name ="pulley">
+
+<form>
+    <div class="form-group">
+        <label>Question</label>
+            <input type="text" name="question" class="form-control" placeholder="Your Question">
+    </div>
+</form>
+
+<div class="blackcircle">
+
+<div class="leftSlant"></div>
+<div class="leftLine">
+    <div id="pinkcircle">
+        <div id="pinktext">
+            <input type="text" name="pink" class="form-control" placeholder="Enter choice here...">
+        </div>
+    </div>
+</div>
+
+<div class="rightSlant"></div>
+<div class="rightLine">
+    <div id="greencircle">
+        <div id="greentext">
+            <input type="text" name="green" class="form-control" placeholder="Enter choice here...">
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+</template>

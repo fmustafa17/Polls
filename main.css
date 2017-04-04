@@ -1,0 +1,112 @@
+/* CSS declarations go here */
+
+.form-group label   {
+  font-size:18px;
+}
+
+#pinkcircle {
+  position: absolute;
+  top: 150px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: deeppink;
+
+  /*transition-property: top;
+  transition-duration: 2s;*/
+}
+
+#greencircle {
+  position: absolute;
+  top: 150px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: lightgreen;
+  
+}
+
+#greentext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+#pinktext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.leftLine {
+  position: absolute;
+  top: 99px;
+  left: -89px;
+  width:5px;
+  height:150px;
+  background: black;
+  transition-property: height;
+  transition-duration: 2s;
+}
+
+/*.leftLine:hover {
+    height: 700px;
+}*/
+
+.rightLine {
+  position: absolute;
+  top: 99px;
+  left: 121px;
+  width:5px;
+  height:150px;
+  background: black;
+}
+
+.rightSlant {
+  position: absolute;
+  top: 25px;
+  left: 77px;
+  width:5px;
+  height:75px;
+  background: black;
+  -webkit-transform: skew(50deg);
+  -moz-transform: skew(50deg);
+  -o-transform: skew(50deg);
+  transform: skew(50deg);
+}
+
+.blackcircle {
+  position: absolute;
+  top: 100px;
+  left: 590px;
+  width: 37px;
+  height: 37px;
+  -webkit-border-radius: 37px;
+  -moz-border-radius: 37px;
+  border-radius: 37px;
+  background: black;
+}
+
+.leftSlant {
+  position: absolute;
+  top: 25px;
+  left: -45px;
+  width:5px;
+  height:75px;
+  background: black;
+  -webkit-transform: skew(175deg);
+  -moz-transform: skew(175deg);
+  -o-transform: skew(175deg);
+  transform: skew(1750deg);
+}
